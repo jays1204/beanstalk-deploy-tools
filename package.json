@@ -1,0 +1,52 @@
+{
+  "name": "beanstalk-deploy-tools",
+  "version": "1.0.0",
+  "description": "tools for deploy aws beanstalk",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -p src/tsconfig.json",
+    "clean": "rimraf dist",
+    "test": "jest --config ./jest.config.js",
+    "prerelease": "npm run clean && npm run build && npm run test",
+    "release": "standard-version"
+  },
+  "homepage": "https://github.com/jays1204/beanstalk-deploy-tools",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jays1204/beanstalk-deploy-tools"
+  },
+  "bugs": {
+    "url": "https://github.com/jays1204/beanstalk-deploy-tools/issues",
+    "email": "issues@axios.com"
+  },
+  "keywords": [
+    "beanstalk",
+    "deploy",
+    "aws",
+    "eb",
+    "elastic",
+    "tool"
+  ],
+  "author": "jays.woo <realjays1204@gmail.com>",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "archiver": "^3.1.1",
+    "aws-sdk": "^2.623.0",
+    "graceful-fs": "^4.2.3",
+    "lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "@types/archiver": "^3.0.0",
+    "@types/graceful-fs": "^4.1.3",
+    "@types/jest": "^25.1.3",
+    "@types/lodash": "^4.14.149",
+    "jest": "^25.1.0",
+    "rimraf": "^3.0.2",
+    "standard-version": "^7.1.0",
+    "ts-jest": "^25.2.1",
+    "typescript": "^3.8.2"
+  }
+}
